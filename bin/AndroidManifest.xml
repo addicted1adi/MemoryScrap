@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.TechNawabs.memoryscrap"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    
+    <application
+        android:icon="@drawable/diary2"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar">
+        
+        <activity
+            android:name="com.TechNawabs.memoryscrap.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:icon="@android:color/transparent"
+            android:theme="@style/AppTheme"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:name="com.TechNawabs.memoryscrap.DiaryActivity"
+            android:label=" ">
+           <meta-data android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow"/>
+
+        </activity>
+        
+        <activity
+            android:name="com.TechNawabs.memoryscrap.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        
+    </application>
+</manifest>
